@@ -1,4 +1,4 @@
-# Chess engine using pygame <br/>
+# Chess engine built using pygame <br/>
 play chess with AI  <br/>
 tune AI to play around with it  <br/>
 more to come... <br/>
