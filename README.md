@@ -9,3 +9,6 @@ more to come... <br/>
 
 # Known Bugs:
 - No Enpesant Pawn Rule
+
+# Acknowledgments:
+The images of the chess pieces were taken off from https://commons.wikimedia.org/wiki/Category:PNG_chess_pieces/Standard_transparent
