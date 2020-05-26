@@ -1,7 +1,8 @@
 # Chess engine built using pygame <br/>
 play chess with AI  <br/>
-tune AI to play around with it  <br/>
-more to come... <br/>
+AI is created using minimax algorithm with alpha-beta pruning <br/>
+every piece and some of the moves given scores based on which ai make moves <br/>
+tune score values to play around with it  <br/>
 
 # Required:
 - Python 3.x
