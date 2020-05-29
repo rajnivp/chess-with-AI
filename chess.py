@@ -1,5 +1,5 @@
 import sys
-from AI import *
+from modules.AI import *
 
 # Initialize pygame first
 pygame.init()
@@ -91,7 +91,7 @@ while run:
         pos = get_inputs()
         if not pos:
             sys.exit()
-            
+
         elif not selected:
             col, row = pos
             selected_piece = select_piece(row, col, 'w')
