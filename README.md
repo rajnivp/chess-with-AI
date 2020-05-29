@@ -1,4 +1,4 @@
-# Chess engine built using pygame <br/>
+# Chess game built using pygame <br/>
 play chess with AI  <br/>
 AI is created using minimax algorithm with alpha-beta pruning <br/>
 every piece and some of the moves given scores based on which ai make moves <br/>
