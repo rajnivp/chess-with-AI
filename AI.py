@@ -71,12 +71,11 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
     depth indicates number of recursions
     alpha,beta value used to break loop which iterates over all possible moves by each piece of each side
     """
-
     if depth == 0:
         score = score_value(board, 'b')
         return score, None, None
 
-    if maximizingPlayer: # Ai side with black piece color is maximizing player
+    if maximizingPlayer:  # Ai side with black piece color is maximizing player
 
         # Set initial score value
         value = -math.inf
@@ -146,7 +145,6 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
                         if alpha >= beta:
                             return value, piece, best_move
 
-
                 else:
                     # Check for pawn promotion
                     promotion = board.move_piece(piece, r, c)
@@ -172,7 +170,7 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
 
                     # Check king or rook piece's moved state
                     if type(piece) == King or type(piece) == Rook:
-                        if check_castle == False:
+                        if check_castle is False:
                             piece.moved = False
 
                     # Change value to score if score is bigger,change initial piece and move to new piece and move
@@ -195,8 +193,6 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
         if type(best_piece) == King or type(best_piece) == Rook:
             best_piece.moved = True
         return value, best_piece, (best_row, best_col)
-
-
 
     else:  # Minimizing player with white piece
 
@@ -234,7 +230,6 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
 
             # Check if castling is allowed at given position
             for r, c in moves:
-
                 # preserve initial piece and coordinates
                 old_row = piece.row
                 old_col = piece.col
@@ -267,7 +262,6 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
                         if alpha >= beta:
                             return value, piece, best_move
 
-
                 else:
                     # Check for pawn promotion
                     promotion = board.move_piece(piece, r, c)
@@ -293,7 +287,7 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
 
                     # Check king or rook piece's moved state
                     if type(piece) == King or type(piece) == Rook:
-                        if check_castle == False:
+                        if check_castle is False:
                             piece.moved = False
 
                     # Change value to score if score is smaller,change initial piece and move to new piece and move
@@ -310,5 +304,5 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
                     if alpha >= beta:
                         return value, piece, best_move
 
-        # Return initial value if no move found which means ai in checkmate
+        # Return initial value if no move found which means player in checkmate
         return value, best_piece, (best_row, best_col)
